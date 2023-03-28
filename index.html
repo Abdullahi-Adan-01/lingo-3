@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preload" href="KGRedHands.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- <link rel="shortcut icon" href="logo-favi.png" type="image/x-icon"> -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Learn Lingo</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img class="logo" src="logo.svg" alt="Logo"></div>
+            <ul class="links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">courses</a></li>
+                <li><a href="#">pricing</a></li>
+
+            </ul>
+            <button class="action-btn"><a href="#"> Enroll</a></button>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars-staggered"></i>
+
+            </div>
+        </nav>
+        <div class="dropdown-menu">
+
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">courses</a></li>
+            <li><a href="#">pricing</a></li>
+            <li><button class="action-btn"><a href="#"> Enroll</a></button></li>
+        </div>
+
+    </header>
+    <section id="about" class="hero">
+        <h1 class="title-1">Speak Across the Globe</h1>
+
+        <img src="main.svg" alt="">
+        <!-- <div class="text-area"> -->
+        <div class="text-area">
+            <h1 class="title-2">Speak Across the Globe</h1>
+            <p>Our engaging and enjoyable teaching methods are designed to help you speak multiple
+                languages with ease.</p>
+            <div class="btn-2">Enroll</div>
+        </div>
+        <!-- </div> -->
+
+    </section>
+    <section id="why" class="choose">
+        <h1 class="title-3">Why choose us</h1>
+        <div class="reason-container">
+
+            <div class="reason-1 reason">
+                <img src="community.svg" alt="community-based">
+                <p>Be a part of our incredible community where you can connect with other learners, exchange ideas, and
+                    collaborate to enhance your knowledge and skills.</p>
+            </div>
+
+
+
+            <div class="reason-2 reason">
+                <img src="knowledge.svg" alt="knowledgeable">
+                <p>Our teachers are committed and passionate about sharing their language expertise with you. They are
+                    dedicated to supporting you whenever you need assistance.</p>
+            </div>
+
+
+            <div class="reason-3 reason">
+                <img src="puzzle.svg" alt="interactive">
+                <p>Discover a more engaging way to learn languages through interactive quizzes, enjoyable interactions,
+                    and
+                    rewards for every completed goal.</p>
+            </div>
+        </div>
+    </section>
+    <!-- This is for the toggle button -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars-staggered'
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

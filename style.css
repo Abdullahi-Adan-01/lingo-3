@@ -1,0 +1,483 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+@font-face {
+    font-family: 'KG Red Hands';
+    src: url('KGRedHands.woff2') format('woff2'),
+        url('KGRedHands.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* variables */
+:root {
+    --black-color: #212529;
+    --image-color: #FF9F1C;
+    --button-color: #2EC4B6;
+
+
+}
+
+/* global styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+/* header section including the media queries */
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.047);
+    z-index: 999;
+
+
+}
+
+nav {
+    /* background-color: #212529; */
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+
+
+}
+
+
+
+nav img {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
+    float: right;
+    flex-wrap: wrap;
+
+}
+
+li {
+
+    list-style: none;
+
+}
+
+.links {
+    display: flex;
+    gap: 5rem;
+
+}
+
+li a {
+    text-decoration: none;
+    color: var(--black-color);
+    /* color: white; */
+    font-size: 17px;
+
+
+}
+
+button {
+    border: none;
+    margin-right: 2rem;
+    background-color: var(--button-color);
+    padding: 8px 22px;
+    border-radius: 10px;
+    transition: all ease .3s;
+
+
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+
+
+}
+
+button:hover {
+    /* color: #fff;
+    background-color: #1A1A1A; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+nav .toggle-btn {
+    font-size: 1.5rem;
+    color: var(--black-color);
+    cursor: pointer;
+    display: none;
+    margin-right: .5rem;
+}
+
+/* dropdown-menu */
+.dropdown-menu {
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    height: 0;
+    background-color: rgba(240, 248, 255, .5);
+    backdrop-filter: blur(200px);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: height .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
+
+}
+
+.dropdown-menu.open {
+    height: 70vh;
+
+
+}
+
+.dropdown-menu li {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu .action-btn {
+    margin: 0 auto;
+    /* padding: 5px 15px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Responsive deign */
+@media only screen and (max-width:680px) {
+
+
+    .links,
+    nav button {
+        display: none;
+    }
+
+    nav .toggle-btn {
+        display: block;
+    }
+
+    nav img {
+        width: 100px;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+}
+
+/* end of navbar */
+/* start of hero section */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.hero img {
+    width: 500px;
+
+}
+
+.text-area {
+    width: 500px;
+    margin-top: 8rem;
+}
+
+.text-area>* {
+    margin: 1rem 3rem;
+}
+
+.text-area h1 {
+    width: 400px;
+    font-size: 3rem;
+    letter-spacing: 0.04em;
+    word-spacing: 0.08em;
+    line-height: 1.5;
+    font-family: 'KG Red Hands';
+    font-weight: normal;
+    font-style: normal;
+
+
+    color: var(--black-color);
+}
+
+.text-area p {
+    font-family: 'Rubik', sans-serif;
+    width: 350px;
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+    font-weight: 350;
+    /* font-size: 13px; */
+
+
+
+}
+
+.btn-2 {
+    user-select: none;
+    margin-top: 2rem;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 4rem;
+    padding: 8px 20px;
+    width: 160px;
+    text-align: center;
+    transition: ease-out all .2s;
+}
+
+.btn-2:hover {
+    /* color: #fff;
+    background-color: #1A1A1A; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.btn-2:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* tablet portait */
+@media only screen and (min-width:680px) and (max-width:850px) {
+    .hero img {
+        width: 400px;
+        margin-left: 1rem;
+    }
+
+
+    .text-area h1 {
+        width: 350px;
+        font-size: 1.8rem;
+    }
+
+    .text-area p {
+        font-size: 13px;
+        width: 300px;
+    }
+}
+
+
+.title-1 {
+    display: none;
+}
+
+@media only screen and (max-width:680px) {
+
+    .hero {
+        margin-top: 3rem;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero .title-1 {
+        font-family: 'KG Red Hands';
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        font-size: 1.2rem;
+
+        color: var(--black-color);
+        letter-spacing: 4%;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .title-1 h1 {
+        display: block;
+        font-family: 'KG Red Hands';
+
+    }
+
+    .hero img {
+        width: 350px;
+        height: auto;
+
+
+    }
+
+    .hero p {
+        width: 250px;
+        line-height: 3;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        bottom: 5rem;
+    }
+
+    .btn-2 {
+        user-select: none;
+        margin: 2rem auto;
+        background-color: var(--button-color);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        /* margin-right: 4rem; */
+        padding: 8px 20px;
+        width: 160px;
+        text-align: center;
+        transition: ease-out all .2s;
+        position: relative;
+        bottom: 5rem;
+
+    }
+
+    .btn-2:hover {
+        /* color: #fff;
+        background-color: #1A1A1A; */
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+    }
+
+    .btn-2:active {
+        box-shadow: none;
+        transform: translateY(0);
+    }
+
+    .title-2 {
+        display: none;
+    }
+
+
+}
+
+/* end of hero section */
+
+.choose {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 2rem;
+
+}
+
+
+.choose .title-3 {
+    letter-spacing: 0.04em;
+    word-spacing: 0.08em;
+    line-height: 1.5;
+    font-family: 'KG Red Hands';
+    font-weight: normal;
+    font-style: normal;
+    color: var(--black-color);
+    text-align: center;
+
+
+}
+
+/* .title-3 */
+
+.reason-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    position: relative;
+    left: 5rem;
+    margin-top: 5rem;
+
+
+}
+
+
+.reason {
+    width: 500px;
+}
+
+.reason p {
+    width: 75%;
+    text-align: center;
+    line-height: 2.5;
+}
+
+.reason img {
+    margin-left: 25%;
+}
+
+.reason-3,
+.reason-2 {
+    margin-top: 2rem;
+}
+
+
+
+@media only screen and (min-width:680px) and (max-width:850px) {
+    .reason p {
+        text-align: center;
+        width: 320px;
+    }
+
+    .reason:not(.reason-1) {
+        margin-top: 3rem;
+
+    }
+
+    .reason-1 {
+        margin-top: 1rem;
+    }
+
+
+    .reason img {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+
+    }
+
+
+
+}
+
+@media only screen and (max-width:680px) {
+    .reason>* {
+        margin: 1rem 0;
+
+    }
+
+    .reason p {
+        width: 55%;
+        margin-left: 30px;
+
+    }
+}
