@@ -470,14 +470,40 @@ nav .toggle-btn {
 }
 
 @media only screen and (max-width:680px) {
+    .reason-container {
+        position: relative;
+        left: 2rem;
+    }
+
     .reason>* {
         margin: 1rem 0;
 
     }
 
-    .reason p {
-        width: 55%;
-        margin-left: 30px;
 
+
+    .reason p {
+        width: 78%;
+        margin-left: 2rem;
+        height: min-content;
+        font-size: .8rem;
+
+
+
+    }
+
+    .reason {
+        margin-right: 3rem;
+    }
+
+    .reason img {
+        width: 75px;
+        margin: 0 auto;
+        margin-left: 35%;
+    }
+
+    .title-3 {
+        color: var(--black-color);
+        font-size: 1.2rem;
     }
 }
